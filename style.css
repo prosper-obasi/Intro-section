@@ -1,0 +1,186 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Epilogue', sans-serif;
+  background: hsl(0, 0%, 98%);
+}
+
+h1{
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.btn{
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
+
+.btn:hover{
+  cursor: pointer;
+  background: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 8%);
+
+}
+
+.btn-light{
+  background: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 41%);
+}
+
+.btn-dark{
+  background: hsl(0, 0%, 8%);
+  color: #fff;
+}
+
+/* Navbar */
+.mobile{
+  display: none;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul{
+  list-style: none;
+}
+
+.logo{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navlinks{
+  display: inline-block;
+  padding: 1rem;
+  color: hsl(0, 0%, 41%);
+  position: relative;
+}
+
+.navlinks a{
+  text-decoration: none;
+  color: hsl(0, 0%, 41%);
+}
+
+.navlinks ul{
+  display: none;
+}
+
+.navlinks:hover{
+  cursor: pointer;
+  color: #000;
+}
+
+.navlinks:hover i{
+  transform: rotate(180deg);
+}
+
+.navlinks:hover a{
+  color: #000;
+}
+
+.navlinks:hover ul{
+  display: block;
+  position: absolute;
+  min-width: 150px;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0.5px 0.5px 5px 1px rgba(95, 92, 92, 0.3), -0.5px -0.5px 5px 1px rgba(95, 92, 92, 0.3);
+}
+
+.navlinks:hover ul li{
+  display: block;
+  background: #fff;
+  padding: 0.5rem 1rem;
+  
+}
+
+/* main section */
+.main{
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.text{
+  padding: 4rem 6rem;
+  padding-top: 8rem;
+}
+
+span{
+  display: block;
+}
+
+.text p{
+  width: 60%;
+  padding: 3rem 0;
+  line-height: 1.5;
+}
+
+.client-images{
+  padding: 4rem 0;
+}
+
+.client{
+  margin-right: 1rem;
+}
+
+.hero{
+  height: 600px;
+}
+
+/* Mobile screen */
+@media (max-width: 450px){
+  .mobile{
+    display: block;
+    padding: 1rem;
+  }
+
+  h1{
+    font-size: 2.5rem;
+  }
+
+  span{
+    display: inline;
+  }
+
+  .navlinks{
+    display: none;
+  }
+
+  .hero{
+    width: 100vw;
+  }
+
+  .main{
+    grid-template-columns: repeat(1, 100%);
+  }
+
+  .text{
+    padding: 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text p{
+    width: 95%;
+  }
+
+  .main-item:nth-child(2){
+    grid-row: 1 / span 1;
+  }
+
+  .client{
+    margin-right: 0.3rem;
+    width: 70px;
+  }
+}

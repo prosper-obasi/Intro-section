@@ -126,7 +126,7 @@ span{
 }
 
 .client-images{
-  padding: 4rem 0;
+  padding-top: 3rem;
 }
 
 .client{
@@ -134,7 +134,7 @@ span{
 }
 
 .hero{
-  height: 600px;
+  height: 90vh;
 }
 
 /* Mobile screen */
